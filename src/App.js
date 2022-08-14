@@ -1,7 +1,15 @@
 // import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 
 function App() {
+
+  useEffect(()=>{
+    ReactGA.initialize('G-T193S2YKFJ');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -18,7 +26,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h2>Shubham Patel</h2>
+      <h2>Shubham Patel-</h2>
       <button>click</button>
     </div>
   );
